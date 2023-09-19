@@ -7,11 +7,11 @@ import provaSocial4 from '../assets/prova-social-04.png';
 import provaSocial5 from '../assets/prova-social-05.png';
 import provaSocial6 from '../assets/prova-social-06.png';
 
-interface IResultsProps {
-    setSteps: React.Dispatch<React.SetStateAction<number>>
-}
+// interface IResultsProps {
+//     setSteps: React.Dispatch<React.SetStateAction<number>>
+// }
 
-export function Result({ setSteps }: IResultsProps) {
+export function Result() {
 
     const imageContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -107,13 +107,11 @@ export function Result({ setSteps }: IResultsProps) {
                 </div>
             </div>
 
-            <div className="mb-10">
-                <button onClick={() => {
-                    setSteps(2)
-                }} className="bg-lime-600 w-full text-2xl font-bold animate-pulse-scale">
+            <a href='https://wa.me/47992479009' className="mb-10">
+                <button className="bg-lime-600 w-full text-2xl font-bold animate-pulse-scale">
                     Para <span className='bg-red-500'>ENTRAR AGORA</span>, é necessário apenas pagar taxa de manutenção do sistema <span className='bg-red-500'>(R$29,90)</span>
                 </button>
-            </div>
+            </a>
 
             {/* <div className='flex justify-center text-center text-3xl font-bold mb-10'>
                 <h2>Seu objetivo é perder quantos quilos?</h2>

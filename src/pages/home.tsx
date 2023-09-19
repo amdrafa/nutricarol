@@ -70,7 +70,7 @@ export function Home() {
             {
                 steps == 7 && (
                     <section className="bg-[url('assets/banner.jpg')] h-full bg-cover bg-center flex flex-col items-center p-6">
-                        <Result setSteps={setSteps} />
+                        <Result />
                     </section>
                 )
             }
