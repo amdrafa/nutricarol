@@ -11,11 +11,60 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto+Mono:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&family=Work+Sans:ital,wght@1,800&display=swap"
     rel="stylesheet">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '285016349118288');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=285016349118288&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="/src/main.tsx">
+  </script>
+
+  <script>
+    let prefix = ["https://go.perfectpay.com.br"];
+
+    function getParams() {
+      let t = "",
+        e = window.top.location.href,
+        r = new URL(e);
+      if (null != r) {
+        let a = r.searchParams.get("utm_source"),
+          n = r.searchParams.get("utm_medium"),
+          o = r.searchParams.get("utm_campaign"),
+          m = r.searchParams.get("utm_term"),
+          c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t =
+            `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+      }
+      return t
+
+    } ! function () {
+      var t = new URLSearchParams(window.location.search);
+      t.toString() && document.querySelectorAll("a").forEach(function (e) {
+        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 ===
+          e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() +
+          getParams())
+      })
+    }(); </script>
+
+
+
 </body>
 
 </html>
