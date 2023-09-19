@@ -1,4 +1,3 @@
-import clock from '../assets/relogio.png';
 import moment from 'moment'
 import React, { useEffect, useRef } from 'react';
 import provaSocial1 from '../assets/prova-social-01.jfif';
